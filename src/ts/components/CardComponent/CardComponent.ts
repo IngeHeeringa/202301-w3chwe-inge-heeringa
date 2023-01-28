@@ -1,6 +1,5 @@
 import Component from "../Component/Component.js";
 import { type PokemonInfo } from "../types.js";
-import TypeComponent from "../TypeComponent/TypeComponent.js";
 import { convertToUpperCase } from "../../utils/utils.js";
 
 class CardComponent extends Component {
