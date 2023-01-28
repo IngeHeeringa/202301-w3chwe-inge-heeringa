@@ -18,8 +18,15 @@ export interface PokemonInfo {
 }
 
 export interface Type {
-  slot: number;
   type: {
     name: string;
   };
+}
+
+export interface PokemonListResponse {
+  results: [
+    {
+      name: string;
+    }
+  ];
 }
