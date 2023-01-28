@@ -1,15 +1,31 @@
 .card-info-wrapper,
 .pokemon-types {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.pokemon-card {
-  width: 200px;
+.card-info-wrapper {
+  justify-content: space-between;
 }
 
-img {
+.card-title {
+  font-size: 1.2rem;
+  padding: 5px 2px;
+}
+
+.pokemon-types {
+  justify-content: space-evenly;
+}
+
+.card-body {
+  padding: 10px !important;
+}
+
+.pokemon-card {
+  max-width: 250px;
+}
+
+.pokemon-card__image {
   height: 150px;
   padding: 10px;
 }

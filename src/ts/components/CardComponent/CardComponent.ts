@@ -16,9 +16,9 @@ class CardComponent extends Component {
     super.render();
 
     this.domElement.innerHTML = `
-          <img src=${
+          <img class="pokemon-card__image" src=${
             this.pokemon.sprites.other.dream_world.front_default
-          } alt="${convertToUpperCase(this.pokemon.name)}"></div>
+          } alt="${convertToUpperCase(this.pokemon.name)}">
             <div class="card-body">
               <div class="card-info-wrapper">
                 <h3 class="card-title">${convertToUpperCase(

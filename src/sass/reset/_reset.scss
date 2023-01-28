@@ -13,14 +13,17 @@ h6,
 ul,
 ol,
 li {
-  margin: 0;
+  margin: 0 !important;
 }
 
 ul,
-ol,
-li {
+ol {
   list-style: none;
-  padding: 0;
+  padding: 0 !important;
+}
+
+li {
+  padding: 0.5rem 0;
 }
 
 button,
