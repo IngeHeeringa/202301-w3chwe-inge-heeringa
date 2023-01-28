@@ -1,6 +1,7 @@
 import Component from "../Component/Component.js";
 import { type PokemonInfo } from "../types.js";
 import { convertToUpperCase } from "../../utils/utils.js";
+import TypeComponent from "../TypeComponent/TypeComponent.js";
 
 class CardComponent extends Component {
   pokemon: PokemonInfo;
@@ -27,6 +28,12 @@ class CardComponent extends Component {
               </div>
             </div>
     `;
+
+    const typeComponent = new TypeComponent(
+      this.domElement.querySelector(".card-body"),
+      this.pokemon
+    );
+    typeComponent.render();
   }
 }
 
