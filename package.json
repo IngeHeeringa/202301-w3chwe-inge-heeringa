@@ -8,6 +8,8 @@
     "build-js:dev": "npm run build-js -- -w",
     "test": "jest",
     "test:dev": "npm test -- --watchAll",
+    "build-styles": "sass src/sass/styles.scss public/css/styles.css",
+    "build-styles-watch": "sass src/sass/styles.scss public/css/styles.css --watch",
     "prepare": "husky install"
   },
   "keywords": [],
@@ -27,6 +29,7 @@
     "jest-ts-webcompat-resolver": "^1.0.0",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.3",
+    "sass": "^1.57.1",
     "ts-jest": "^29.0.3",
     "typescript": "^4.8.4"
   },

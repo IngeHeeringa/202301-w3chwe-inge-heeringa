@@ -1,0 +1,15 @@
+.card-info-wrapper,
+.pokemon-types {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokemon-card {
+  width: 200px;
+}
+
+img {
+  height: 150px;
+  padding: 10px;
+}
