@@ -136,4 +136,10 @@ img {
   background-color: #f0b5bc;
 }
 
+.main-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 /*# sourceMappingURL=styles.css.map */
