@@ -4,6 +4,5 @@ import HeaderComponent from "./components/HeaderComponent/HeaderComponent.js";
 import PageComponent from "./components/PageComponent/PageComponent.js";
 import { getPokemonInfo, getPokemonList } from "./utils/utils.js";
 
-const rootContainer = document.querySelector(".root");
-const pageComponent = new PageComponent(rootContainer);
+const pageComponent = new PageComponent(document.body);
 pageComponent.render();

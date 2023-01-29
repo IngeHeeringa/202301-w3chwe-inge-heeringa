@@ -6,7 +6,7 @@ import HeaderComponent from "../HeaderComponent/HeaderComponent.js";
 
 class PageComponent extends Component {
   constructor(parentElement: Element) {
-    super(parentElement, "app", "div");
+    super(parentElement, "root container", "div");
     this.parentElement = parentElement;
   }
 
