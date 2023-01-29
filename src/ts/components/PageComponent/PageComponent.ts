@@ -34,7 +34,7 @@ class PageComponent extends Component {
 
       cardList.render();
 
-      const footer = new FooterComponent(this.domElement);
+      const footer = new FooterComponent(this.domElement, pokemonListResponse);
       footer.render();
     })();
   }

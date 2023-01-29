@@ -10,7 +10,7 @@ class HeaderComponent extends Component {
     super.render();
 
     this.domElement.innerHTML = `
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokémon logo">
+    <img class="header__logo" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokémon logo">
     `;
   }
 }

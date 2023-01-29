@@ -1,21 +1,32 @@
 import { getPokemonInfo, getPokemonList } from "../../utils/utils.js";
 import CardListComponent from "../CardListComponent/CardListComponent.js";
 import Component from "../Component/Component.js";
+import { type PokemonListResponse } from "../types.js";
 
 class FooterComponent extends Component {
   offsetCounter: number;
+  pokemonListResponse: PokemonListResponse;
 
-  constructor(parentElement: Element, offsetCounter = 1) {
+  constructor(
+    parentElement: Element,
+    pokemonListResponse: PokemonListResponse,
+    offsetCounter = 1
+  ) {
     super(parentElement, "main-footer container", "footer");
     this.parentElement = parentElement;
     this.offsetCounter = offsetCounter;
+    this.pokemonListResponse = pokemonListResponse;
   }
 
   render() {
     super.render();
 
     this.domElement.innerHTML = `
-    <button class="btn btn-secondary list-navigation list-navigation--previous"><</button><span>${this.offsetCounter}/151</span><button class="btn btn btn-secondary list-navigation list-navigation--next">></button>
+    <button class="btn btn-secondary list-navigation list-navigation--previous"><</button><span>${
+      this.offsetCounter + 7
+    }/${
+      this.pokemonListResponse.count
+    }</span><button class="btn btn btn-secondary list-navigation list-navigation--next">></button>
     `;
 
     const nextButton = document.querySelector(".list-navigation--next");
@@ -30,6 +41,7 @@ class FooterComponent extends Component {
       ) {
         const pokemon = getPokemonInfo(i);
         pokemons.push(pokemon);
+        this.render();
       }
 
       pokemons = await Promise.all(pokemons);
@@ -60,6 +72,7 @@ class FooterComponent extends Component {
       ) {
         const pokemon = getPokemonInfo(i);
         pokemons.push(pokemon);
+        this.render();
       }
 
       pokemons = await Promise.all(pokemons);

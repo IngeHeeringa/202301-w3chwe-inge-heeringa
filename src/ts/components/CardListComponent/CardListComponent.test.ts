@@ -36,6 +36,7 @@ describe("Given a CardListComponent component", () => {
         },
       ];
       const pokemonListResponse: PokemonListResponse = {
+        count: 0,
         results: [
           {
             name: "",
