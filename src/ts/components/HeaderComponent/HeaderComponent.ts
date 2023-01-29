@@ -11,6 +11,9 @@ class HeaderComponent extends Component {
 
     this.domElement.innerHTML = `
     <img class="header__logo" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokémon logo">
+    <nav class="main-navigation">
+      <a class="btn btn-primary main-navigation__link">Go to team</a>
+    </nav>
     `;
   }
 }
