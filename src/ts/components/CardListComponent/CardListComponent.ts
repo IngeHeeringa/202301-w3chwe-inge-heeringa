@@ -11,7 +11,7 @@ class CardListComponent extends Component {
     pokemons: PokemonInfo[],
     pokemonListResponse: PokemonListResponse
   ) {
-    super(parentElement, "card-list row row-cols-2", "ul");
+    super(parentElement, "card-list row row-cols-2 row-cols-md-4", "ul");
     this.parentElement = parentElement;
     this.pokemonList = pokemonListResponse;
     this.pokemons = pokemons;
