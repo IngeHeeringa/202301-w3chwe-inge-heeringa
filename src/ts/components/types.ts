@@ -24,6 +24,7 @@ export interface Type {
 }
 
 export interface PokemonListResponse {
+  count: number;
   results: [
     {
       name: string;

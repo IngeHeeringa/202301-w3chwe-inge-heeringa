@@ -19,9 +19,9 @@ class CardComponent extends Component {
           <img class="pokemon-card__image" src=${
             this.pokemon.sprites.other.dream_world.front_default
           } alt="${convertToUpperCase(this.pokemon.name)}">
-            <div class="card-body">
+            <div class="card-body pokemon-card__content">
               <div class="card-info-wrapper">
-                <h3 class="card-title">${convertToUpperCase(
+                <h3 class="pokemon-card__title card-title">${convertToUpperCase(
                   this.pokemon.name
                 )}</h3>
                 <span>#${this.pokemon.id}</span>
@@ -29,11 +29,11 @@ class CardComponent extends Component {
             </div>
     `;
 
-    const typeComponent = new TypeComponent(
+    const type = new TypeComponent(
       this.domElement.querySelector(".card-body"),
       this.pokemon
     );
-    typeComponent.render();
+    type.render();
   }
 }
 
