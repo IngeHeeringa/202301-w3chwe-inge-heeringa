@@ -6,7 +6,7 @@ class FooterComponent extends Component {
   offsetCounter: number;
 
   constructor(parentElement: Element, offsetCounter = 1) {
-    super(parentElement, "footer", "footer");
+    super(parentElement, "main-footer container", "footer");
     this.parentElement = parentElement;
     this.offsetCounter = offsetCounter;
   }
@@ -15,7 +15,7 @@ class FooterComponent extends Component {
     super.render();
 
     this.domElement.innerHTML = `
-    <footer class="main-footer container"><button class="btn btn-secondary list-navigation list-navigation--previous"><</button><span>${this.offsetCounter}/151</span><button class="btn btn btn-secondary list-navigation list-navigation--next">></button></footer>
+    <button class="btn btn-secondary list-navigation list-navigation--previous"><</button><span>${this.offsetCounter}/151</span><button class="btn btn btn-secondary list-navigation list-navigation--next">></button>
     `;
 
     const nextButton = document.querySelector(".list-navigation--next");
