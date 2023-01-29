@@ -144,4 +144,10 @@ img {
   align-items: center;
 }
 
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /*# sourceMappingURL=styles.css.map */

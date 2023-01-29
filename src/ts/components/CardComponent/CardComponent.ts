@@ -16,6 +16,7 @@ class CardComponent extends Component {
     super.render();
 
     this.domElement.innerHTML = `
+    <button class="btn btn-secondary pokemon-card__add-favorite">Add to team</button>
           <img class="pokemon-card__image" src=${
             this.pokemon.sprites.other.dream_world.front_default
           } alt="${convertToUpperCase(this.pokemon.name)}">
@@ -34,6 +35,24 @@ class CardComponent extends Component {
       this.pokemon
     );
     type.render();
+
+    const addButton = this.domElement.querySelector(
+      ".pokemon-card__add-favorite"
+    );
+    addButton.addEventListener("click", async () => {
+      await fetch(
+        "https://two02301-w3chwe-pokeapi-inge-heeringa.onrender.com/pokemon/",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            pokemon: this.pokemon,
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      ).then(async (response) => response.json());
+    });
   }
 }
 
